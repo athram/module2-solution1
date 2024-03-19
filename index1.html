@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Responsive Layout</title>
+
+<style>
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  h1 {
+    text-align: center;
+  }
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  .section {
+    position: relative;
+    border: 1px solid black;
+    margin-bottom: 20px;
+  }
+  .section-title {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: lightblue;
+    padding: 5px 10px;
+    border: 1px solid black;
+  }
+  @media (min-width: 768px) and (max-width: 991px) {
+    .section {
+      width: 49%;
+      float: left;
+    }
+    .section:nth-child(3) {
+      width: 100%;
+      clear: both;
+    }
+  }
+  @media (max-width: 767px) {
+    .section {
+      width: 100%;
+    }
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <h1>Responsive Layout</h1>
+    <div class="section">
+      <div class="section-title">Chicken</div>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec eros non erat condimentum sollicitudin. </p>
+    </div>
+    <div class="section">
+      <div class="section-title">Beef</div>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec eros non erat condimentum sollicitudin. </p>
+    </div>
+    <div class="section">
+      <div class="section-title">Sushi</div>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec eros non erat condimentum sollicitudin. </p>
+    </div>
+  </div>
+</body>
+</html>
