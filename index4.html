@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Responsive Layout</title>
+<style>
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+
+  h1 {
+    font-size: 150%; /* 75% larger than dummy text */
+  }
+
+  .section {
+    box-sizing: border-box;
+    border: 1px solid black;
+    padding: 20px;
+    margin-bottom: 20px;
+    position: relative;
+    color: #333; /* Text color */
+  }
+
+  .section-title {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #ffcc00; /* Unique color for section title region */
+    padding: 5px 10px;
+    border: 1px solid black;
+    font-size: 125%; /* 25% larger than dummy text */
+    color: #333; /* Text color */
+  }
+
+  /* Desktop view */
+  @media (min-width: 992px) {
+    .container {
+      display: flex;
+    }
+    .section {
+      width: 33.33%; /* Equal width for each section */
+      float: left;
+    }
+  }
+
+  /* Tablet view */
+  @media (max-width: 991px) and (min-width: 768px) {
+    .container {
+      display: block;
+    }
+    .section {
+      width: 48%; /* Equal width for first two sections */
+      float: none;
+    }
+    .section:nth-child(3) {
+      width: 100%; /* Full width for third section */
+    }
+  }
+
+  /* Mobile view */
+  @media (max-width: 767px) {
+    .section {
+      width: 100%; /* Full width for each section */
+      float: none;
+    }
+  }
+</style>
+</head>
+<body>
+
+<h1>Module 2 Coding Assignment</h1>
+
+<div class="container">
+  <!-- Section 1 -->
+  <div class="section" style="background-color: #ff9999;">
+    <div class="section-title">Chicken</div>
+    <p style="margin-top: 30px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam gravida magna sit amet quam varius, eu tristique purus semper.</p>
+  </div>
+  <!-- Section 2 -->
+  <div class="section" style="background-color: #99ccff;">
+    <div class="section-title">Beef</div>
+    <p style="margin-top: 30px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam gravida magna sit amet quam varius, eu tristique purus semper.</p>
+  </div>
+  <!-- Section 3 -->
+  <div class="section" style="background-color: #99ff99;">
+    <div class="section-title">Sushi</div>
+    <p style="margin-top: 30px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam gravida magna sit amet quam varius, eu tristique purus semper.</p>
+  </div>
+</div>
+
+</body>
+</html>
